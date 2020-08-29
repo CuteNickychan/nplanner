@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="nav"  class="px-0 pt-0">
+      <top-header></top-header>
+      
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import TopHeader from "@/components/TopHeader.vue"
+
+export default {
+  components:{'top-header':TopHeader}
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -18,7 +26,7 @@
 }
 
 #nav {
-  padding: 30px;
+  
 
   a {
     font-weight: bold;
